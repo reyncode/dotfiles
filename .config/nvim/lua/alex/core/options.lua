@@ -13,7 +13,7 @@ vim.opt.wrap = false
 -- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.iskeyword:append ("-")
+vim.opt.iskeyword:append("-")
 
 -- appearance
 vim.opt.termguicolors = false
@@ -23,7 +23,15 @@ vim.opt.background = "dark"
 vim.opt.backspace = "indent,eol,start"
 
 -- clipboard
-vim.opt.clipboard:append ("unnamedplus")
+vim.opt.clipboard = "unnamedplus"
+if vim.fn.has('wsl') == 1 then
+	vim.api.nvim_create_autocmd('TextYankPost', {
+		group = vim.api.nvim_create_augroup('Yank', { clear = true }),
+		callback = function()
+			vim.fn.system('clip.exe', vim.fn.getreg('"'))
+		end,
+	})
+end
 
 -- split windows
 vim.opt.splitright = true

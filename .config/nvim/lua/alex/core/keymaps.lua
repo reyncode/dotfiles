@@ -18,10 +18,16 @@ vim.keymap.set ("n", "<leader>sv", "<C-w>v") 	 -- split window vertically
 vim.keymap.set ("n", "<leader>sh", "<C-w>s") 	 -- split window horizontally
 vim.keymap.set ("n", "<leader>sx", ":close<CR>") -- close current split window
 
+vim.keymap.set ("n", "<C-k>", "<C-W><C-K>") 	 -- focus top split
+vim.keymap.set ("n", "<C-j>", "<C-W><C-J>") 	 -- focus bottom split
+vim.keymap.set ("n", "<C-l>", "<C-W><C-L>") 	 -- focus right split
+vim.keymap.set ("n", "<C-h>", "<C-W><C-H>") 	 -- focus left split
+
 ----------------------
 -- Plugin Keybinds
 ----------------------
 
 -- nvim-tree
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")  -- toggle file explorer
+vim.keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>")   -- focus file explorer
 vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>") -- refresh file explorer 

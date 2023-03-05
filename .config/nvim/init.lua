@@ -11,6 +11,7 @@ require("alex.plugins.web_devicons")
 require("alex.plugins.onedark")
 require("alex.plugins.lualine")
 require("alex.plugins.tree")
+require("alex.plugins.treesitter")
 
 -- lsp
 require("alex.plugins.lsp")

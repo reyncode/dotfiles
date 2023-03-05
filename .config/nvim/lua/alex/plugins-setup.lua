@@ -40,12 +40,21 @@ return require('packer').startup(function(use)
 
 	-- status bar
 	use {
-	  'nvim-lualine/lualine.nvim',
-	  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
 	-- file explorer
   	use("nvim-tree/nvim-tree.lua")
+
+	-- syntax highlighting
+	use {
+		'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+		end,
+	}
 
 	if packer_bootstrap then
 		require('packer').sync()
