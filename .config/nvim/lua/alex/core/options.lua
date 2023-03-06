@@ -14,6 +14,7 @@ vim.opt.wrap = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.iskeyword:append("-")
+vim.opt.iskeyword:append("_")
 
 -- appearance
 vim.opt.termguicolors = false

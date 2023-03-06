@@ -12,6 +12,7 @@ require("alex.plugins.onedark")
 require("alex.plugins.lualine")
 require("alex.plugins.tree")
 require("alex.plugins.treesitter")
+require("alex.plugins.comment")
 
 -- lsp
 require("alex.plugins.lsp")
