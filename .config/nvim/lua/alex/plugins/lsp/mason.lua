@@ -28,9 +28,18 @@ end
 local opts = {}
 
 for _, server in pairs(servers) do
+
 	opts = {
 		on_attach = require("alex.plugins.lsp.handlers").on_attach
 	}
+
+	server = vim.split(server, "@")[1]
+
+	-- add our options from settings.server file
+	local conf_opts_ok, conf_opts = pcall(require, "alex.plugins.lsp.settings." .. server)
+	if conf_opts_ok then
+		opts = vim.tbl_deep_extend("force", conf_opts, opts)
+	end
 
 	lspconfig[server].setup(opts)
 end

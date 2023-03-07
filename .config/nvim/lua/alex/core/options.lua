@@ -8,7 +8,7 @@ vim.opt.shiftwidth = 4
 vim.opt.autoindent = true
 
 -- line wrap
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 -- search
 vim.opt.ignorecase = true
