@@ -13,9 +13,13 @@ vim.keymap.set ("c", "jk", "<C-C>")
 -- don't copy into register (blackhole register "_)
 vim.keymap.set ("n", "x", '"_x')
 
+-- don't exit visual after indent/outdent
+vim.keymap.set ("v", ">", ">gv")
+vim.keymap.set ("v", "<", "<gv")
+
 -- window management
-vim.keymap.set ("n", "<leader>sv", "<C-w>v") 	 -- split window vertically
-vim.keymap.set ("n", "<leader>sh", "<C-w>s") 	 -- split window horizontally
+vim.keymap.set ("n", "<leader>sv", "<C-w>v") 	   -- split window vertically
+vim.keymap.set ("n", "<leader>sh", "<C-w>s") 	 	 -- split window horizontally
 vim.keymap.set ("n", "<leader>sx", ":close<CR>") -- close current split window
 
 vim.keymap.set ("n", "<C-k>", "<C-W><C-K>") 	 -- focus top split

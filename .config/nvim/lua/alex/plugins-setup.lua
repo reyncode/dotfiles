@@ -26,17 +26,21 @@ return require('packer').startup(function(use)
 
 	-- My plugins here
 
+	-- completions
+
+
 	-- lsp
-	use("neovim/nvim-lspconfig") 			 -- enable LSP
-  	use("williamboman/mason.nvim") 		  	 -- bridges the gap between nvim and the server
-  	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
+	use("neovim/nvim-lspconfig") 			 			 -- enable LSP
+ 	use("williamboman/mason.nvim") 		  	 	 -- bridges the gap between nvim and the server
+ 	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
 
 	-- pairing brackets, braces, etc
 	use("windwp/nvim-autopairs")
 
 	-- appearance
 	use("nvim-tree/nvim-web-devicons") -- icon kit
-	use("navarasu/onedark.nvim")	   -- colorscheme
+	use("navarasu/onedark.nvim")	   	 -- colorscheme
+
 
 	-- status bar
 	use {
@@ -45,19 +49,19 @@ return require('packer').startup(function(use)
 	}
 
 	-- file explorer
-  	use("nvim-tree/nvim-tree.lua")
+	use("nvim-tree/nvim-tree.lua")
 
 	-- syntax highlighting
 	use {
 		'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
+		run = function()
+					local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+					ts_update()
 		end,
 	}
 
 	-- commenting with gc
-  	use("numToStr/Comment.nvim")
+	use("numToStr/Comment.nvim")
 
 	if packer_bootstrap then
 		require('packer').sync()

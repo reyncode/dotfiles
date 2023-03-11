@@ -4,6 +4,7 @@ require("alex.plugins-setup")
 -- settings
 require("alex.core.options")
 require("alex.core.keymaps")
+require("alex.core.colorscheme")
 
 -- plugins
 require("alex.plugins.autopairs")
