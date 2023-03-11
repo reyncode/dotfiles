@@ -35,3 +35,6 @@ vim.keymap.set ("n", "<C-h>", "<C-W><C-H>") 	 -- focus left split
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")  -- toggle file explorer
 vim.keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>")   -- focus file explorer
 vim.keymap.set("n", "<leader>r", ":NvimTreeRefresh<CR>") -- refresh file explorer 
+
+-- telescope
+vim.keymap.set("n", "<leader>t", ":Telescope<CR>")  -- toggle file explorer

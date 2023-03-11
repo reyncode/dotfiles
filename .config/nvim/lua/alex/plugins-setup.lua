@@ -69,6 +69,11 @@ return require('packer').startup(function(use)
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
 
+	-- fuzzy finder
+	use "nvim-lua/plenary.nvim" -- telescope dep
+	use "nvim-telescope/telescope.nvim"
+	use 'nvim-telescope/telescope-media-files.nvim'
+
 	-- syntax highlighting
 	use {
 		'nvim-treesitter/nvim-treesitter',
