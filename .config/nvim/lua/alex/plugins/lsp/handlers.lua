@@ -1,6 +1,6 @@
-local Handler = {}
+local M = {}
 
-Handler.setup = function()
+M.setup = function()
 
 	-- signs that show on the side
 	local signs = {
@@ -44,6 +44,22 @@ Handler.setup = function()
 
 end
 
+local function highlights(client)
+	-- Set autocommands conditional on server_capabilities
+	if client.server_capabilities.documentHighlight then
+		vim.api.nvim_exec(
+			[[
+			augroup lsp_document_highlight
+				autocmd! * <buffer>
+				autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+				autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+			augroup END
+		]],
+			false
+		)
+	end
+end
+
 local function keymaps(bufnr)
 
 	local opts = { noremap = true, silent = true }
@@ -61,10 +77,18 @@ local function keymaps(bufnr)
 
 end
 
-Handler.on_attach = function(client, bufnr)
-
+M.on_attach = function(client, bufnr)
 	keymaps(bufnr)
-
+	highlights(client)
 end
 
-return Handler
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not status_ok then
+	return
+end
+
+M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
+
+return M

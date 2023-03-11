@@ -17,3 +17,6 @@ require("alex.plugins.comment")
 
 -- lsp
 require("alex.plugins.lsp")
+
+-- completions
+require("alex.plugins.cmp")
