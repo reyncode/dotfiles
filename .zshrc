@@ -12,16 +12,18 @@ if [[ $PLATFORM = "linux" ]]; then
 
 	# sources
 	source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+	source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 	source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 
 elif [[ $PLATFORM = "apple" ]]; then
+	
 	# aliases
-	alias ls='ls -Gla'
+	alias ls='ls -G'
 
 	# sources
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-	source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+	source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 fi
 
 ### shared ###

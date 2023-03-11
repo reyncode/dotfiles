@@ -24,7 +24,7 @@ vim.opt.background = "dark"
 vim.opt.backspace = "indent,eol,start"
 
 -- clipboard
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append("unnamedplus")
 if vim.fn.has('wsl') == 1 then
 	vim.api.nvim_create_autocmd('TextYankPost', {
 		group = vim.api.nvim_create_augroup('Yank', { clear = true }),
