@@ -53,9 +53,6 @@ return require('packer').startup(function(use)
  	use("williamboman/mason.nvim") 		  	 -- bridges the gap between nvim and the server
  	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
 
-	-- pairing brackets, braces, etc
-	use("windwp/nvim-autopairs")
-
 	-- appearance
 	use("nvim-tree/nvim-web-devicons") -- icon kit
 	use("navarasu/onedark.nvim")	   -- colorscheme
@@ -70,9 +67,9 @@ return require('packer').startup(function(use)
 	use("nvim-tree/nvim-tree.lua")
 
 	-- fuzzy finder
-	use "nvim-lua/plenary.nvim" -- telescope dep
-	use "nvim-telescope/telescope.nvim"
-	use 'nvim-telescope/telescope-media-files.nvim'
+	use("nvim-lua/plenary.nvim") -- telescope dep
+	use("nvim-telescope/telescope.nvim")
+	use('nvim-telescope/telescope-media-files.nvim')
 
 	-- syntax highlighting
 	use {
@@ -80,6 +77,15 @@ return require('packer').startup(function(use)
 		run = function()
 			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
 			ts_update()
+		end,
+	}
+
+	-- pairing brackets, braces, tags, etc
+	use("windwp/nvim-autopairs")
+	use {
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("alex.plugins.treesitter")
 		end,
 	}
 

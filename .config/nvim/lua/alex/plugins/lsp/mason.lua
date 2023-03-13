@@ -1,7 +1,9 @@
 -- servers we want to run
 local servers = {
 	"lua_ls",
-	"clangd"
+	"clangd",
+	"rust_analyzer",
+	"tsserver"
 }
 
 local settings = {

@@ -1,7 +1,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
+#test
 ### platform specific ###
 
 if [[ $PLATFORM = "linux" ]]; then
@@ -27,6 +27,9 @@ elif [[ $PLATFORM = "apple" ]]; then
 fi
 
 ### shared ###
+HISTFILE=$HOME/.cache/zsh/.zsh_history
+HISTSIZE=2000
+SAVEHIST=1000
 
 # aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
