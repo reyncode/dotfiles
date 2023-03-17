@@ -12,7 +12,6 @@ if [[ $PLATFORM = "linux" ]]; then
 
 	# sources
 	source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-	source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 	source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 
 elif [[ $PLATFORM = "apple" ]]; then
@@ -22,7 +21,6 @@ elif [[ $PLATFORM = "apple" ]]; then
 
 	# sources
 	source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 	source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 fi
 
