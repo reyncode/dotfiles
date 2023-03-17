@@ -5,9 +5,9 @@ M.setup = function()
 	-- signs that show on the side
 	local signs = {
 		{ name = "DiagnosticSignError", text = "" },
-    	{ name = "DiagnosticSignWarn", text = "" },
-    	{ name = "DiagnosticSignHint", text = "" },
-    	{ name = "DiagnosticSignInfo", text = "" },
+		{ name = "DiagnosticSignWarn", text = "" },
+		{ name = "DiagnosticSignHint", text = "" },
+		{ name = "DiagnosticSignInfo", text = "" },
 	}
 
 	for _, sign in ipairs(signs) do
@@ -19,8 +19,8 @@ M.setup = function()
 		signs = {
 			active = signs
 		},
-		update_in_insert = true,
-		underline = true,
+		update_in_insert = false,
+		underline = false,
 		severity_sort = true,
 		float = {
 			focusable = false,
