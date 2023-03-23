@@ -10,6 +10,16 @@ vim.keymap.set ("i", "jk", "<ESC>")
 vim.keymap.set ("v", "jk", "<ESC>")
 vim.keymap.set ("c", "jk", "<C-C>")
 
+-- move the current line up or down
+vim.keymap.set ("n", "<A-k>", ":m .-2<CR>==") -- up
+vim.keymap.set ("n", "<A-j>", ":m .+1<CR>==") -- down
+
+vim.keymap.set ("v", "<A-k>", ":m '<-2<CR>gv=gv") -- up
+vim.keymap.set ("v", "<A-j>", ":m '>+1<CR>gv=gv") -- down
+
+vim.keymap.set ("i", "<A-k>", ":m .-2<CR>") -- up
+vim.keymap.set ("i", "<A-j>", ":m .+1<CR>") -- down
+
 -- don't copy into register (blackhole register "_)
 vim.keymap.set ("n", "x", '"_x')
 
