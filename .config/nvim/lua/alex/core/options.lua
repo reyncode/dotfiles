@@ -2,10 +2,12 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- tabs & spacing
-vim.opt.tabstop = 2
+-- tabs & spacing - config: spaces for tabs https://stackoverflow.com/a/1878983
 vim.opt.shiftwidth = 2
-vim.opt.autoindent = true
+vim.opt.smarttab = true
+vim.opt.expandtab = true -- use spaces
+vim.opt.tabstop = 8
+vim.opt.softtabstop = 0
 
 -- line wrap
 vim.opt.wrap = false
