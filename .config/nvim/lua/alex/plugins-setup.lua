@@ -38,15 +38,15 @@ return require('packer').startup(function(use)
 
 	-- completions
 	use "hrsh7th/nvim-cmp" 		   -- the completion plugin
-	use "hrsh7th/cmp-buffer" 	   -- buffer completions
+	-- use "hrsh7th/cmp-buffer" 	   -- buffer completionst
 	use "hrsh7th/cmp-path" 		   -- path completions
 	use "saadparwaiz1/cmp_luasnip" -- snippet completions
 	use "hrsh7th/cmp-nvim-lsp" 	   -- lsp api completions
 	use "hrsh7th/cmp-nvim-lua" 	   -- lua api completions
 
 	-- snippets
-	use "L3MON4D3/LuaSnip" 			   -- snippet engine
-	use "rafamadriz/friendly-snippets" -- snippit repository
+	-- use "L3MON4D3/LuaSnip" 			   -- snippet engine
+	-- use "rafamadriz/friendly-snippets" -- snippit repository
 
 	-- lsp
 	use("neovim/nvim-lspconfig") 			 -- enable LSP
