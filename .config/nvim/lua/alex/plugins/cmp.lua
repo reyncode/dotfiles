@@ -104,7 +104,7 @@ cmp.setup {
 				nvim_lua = "[NVIM_LUA]",
 				-- luasnip = "[Snippet]",
 				-- buffer = "[Buffer]",
-				path = "[Path]",
+				-- path = "[Path]",
 			})[entry.source.name]
 			return vim_item
 		end,
@@ -114,7 +114,7 @@ cmp.setup {
 		{ name = "nvim_lua" },
 		-- { name = "luasnip" },
 		-- { name = "buffer" },
-		{ name = "path" },
+		-- { name = "path" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
