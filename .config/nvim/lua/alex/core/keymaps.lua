@@ -6,9 +6,9 @@ vim.g.mapleader = " "
 ---------------------
 
 -- exit from insert, visual & command
-vim.keymap.set ("i", "ff", "<ESC>")
-vim.keymap.set ("v", "ff", "<ESC>")
-vim.keymap.set ("c", "ff", "<C-C>")
+vim.keymap.set ("i", "jk", "<ESC>")
+vim.keymap.set ("v", "jk", "<ESC>")
+vim.keymap.set ("c", "jk", "<C-C>")
 
 -- move the current line up or down
 vim.keymap.set ("n", "<A-k>", ":m .-2<CR>==") -- up
