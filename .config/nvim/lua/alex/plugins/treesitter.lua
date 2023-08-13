@@ -6,7 +6,7 @@ end
 treesitter.setup {
 
 	auto_install = true,
-	ensure_installed = { "c", "cpp", "lua", "vim", "help", "query" },
+	ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "query" },
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)
   	sync_install = false,
