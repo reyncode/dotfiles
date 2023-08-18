@@ -66,6 +66,12 @@ return require('packer').startup(function(use)
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
 
+	-- terminal
+  use {
+    "akinsho/toggleterm.nvim",
+    tag = '*',
+  }
+
 	-- fuzzy finder
 	use("nvim-lua/plenary.nvim") -- telescope dep
 	use("nvim-telescope/telescope.nvim")

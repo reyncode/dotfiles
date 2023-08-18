@@ -15,6 +15,7 @@ require("alex.plugins.tree")
 require("alex.plugins.treesitter")
 require("alex.plugins.comment")
 require("alex.plugins.telescope")
+require("alex.plugins.toggleterm")
 
 -- lsp
 require("alex.plugins.lsp")
