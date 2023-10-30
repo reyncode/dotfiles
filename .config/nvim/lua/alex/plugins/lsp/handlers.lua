@@ -60,32 +60,7 @@ local function highlights(client)
 	end
 end
 
-local function keymaps(bufnr)
-
-	local opts = { noremap = true, silent = true }
-
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-
-	-- open in same window
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gdd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gDD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gii", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-
-	-- open vertically
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gdv", "<cmd>:vsplit | lua vim.lsp.buf.definition()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gDv", "<cmd>:vsplit | lua vim.lsp.buf.declaration()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "giv", "<cmd>:vsplit | lua vim.lsp.buf.implementation()<CR>", opts)
-
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-
-end
-
 M.on_attach = function(client, bufnr)
-	keymaps(bufnr)
 	highlights(client)
 end
 
