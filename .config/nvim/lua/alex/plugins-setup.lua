@@ -34,24 +34,22 @@ return require('packer').startup(function(use)
 
 	use('wbthomason/packer.nvim')
 
-	-- my plugins below --
-
-	-- completions
-	use "hrsh7th/nvim-cmp" 		   -- the completion plugin
-	-- use "hrsh7th/cmp-buffer" 	   -- buffer completionst
-	use "hrsh7th/cmp-path" 		   -- path completions
-	use "saadparwaiz1/cmp_luasnip" -- snippet completions
-	use "hrsh7th/cmp-nvim-lsp" 	   -- lsp api completions
-	use "hrsh7th/cmp-nvim-lua" 	   -- lua api completions
-
-	-- snippets
-	-- use "L3MON4D3/LuaSnip" 			   -- snippet engine
-	-- use "rafamadriz/friendly-snippets" -- snippit repository
-
 	-- lsp
-	use("neovim/nvim-lspconfig") 			 -- enable LSP
+	use("neovim/nvim-lspconfig")
  	use("williamboman/mason.nvim") 		  	 -- bridges the gap between nvim and the server
  	use("williamboman/mason-lspconfig.nvim") -- simple to use language server installer
+
+  -- completions
+  use {
+    "hrsh7th/nvim-cmp",
+    requires = {
+      "hrsh7th/cmp-vsnip",
+      "hrsh7th/vim-vsnip",
+      "hrsh7th/cmp-buffer",
+	    "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lsp",
+    }
+  }
 
 	-- appearance
 	use("nvim-tree/nvim-web-devicons") -- icon kit
