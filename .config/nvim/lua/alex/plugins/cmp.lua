@@ -1,6 +1,6 @@
 local cmp = require("cmp")
 
-vim.g.cmp_toggle = true
+vim.g.cmp_toggle = false -- off by default
 
 cmp.setup({
   snippet = {
