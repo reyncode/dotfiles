@@ -38,6 +38,7 @@ SAVEHIST=1000
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias keymaps="nvim ~/.config/nvim/lua/alex/core/keymaps.lua"
 alias options="nvim ~/.config/nvim/lua/alex/core/options.lua"
+alias py="/usr/bin/python3"
 
 # global sources
 [[ ! -f ~/.config/p10k/.p10k.zsh ]] || source ~/.config/p10k/.p10k.zsh
